@@ -90,3 +90,18 @@ function filterLargeTransactions(transactions, filterFunction) {
   let transactions = [200, 1500, 3200, 800, 2500];
   // Logging large transactions by an amount greater than 1000
   console.log(filterLargeTransactions(transactions, amount => amount > 1000));
+
+// Task 7: Closures
+// Function to create a cart tracker
+function createCartTracker() {
+    let total = 0;
+    // Return a function that adds items to the cart and maintains the total
+    return function(itemPrice) {
+      total += itemPrice;
+      return `Total Cart Value: $${total}`;
+    };
+  }
+  let cart = createCartTracker();
+  // Logging each shopping cart's value
+  console.log(cart(45));
+  console.log(cart(91));
