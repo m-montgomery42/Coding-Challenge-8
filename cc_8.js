@@ -63,8 +63,20 @@ function calculateRentalCost(days, carType, insurance = false) {
       totalCost += days * 20;
     }
   
-    // Logging the total ost of the rental
+    // Logging the total cost of the rental
     console.log(`Total Rental Cost: $${totalCost}`);
   }
   calculateRentalCost(5, "Economy", true);
   calculateRentalCost(9, "Luxury", false);
+
+// Task 5: Returning Values
+// Function to calculate the total loan payment
+function calculateLoanPayment(principal, rate, time) {
+    let totalPayment = principal + (principal * rate * time);
+    
+    // Logging the total loan payment
+    console.log(`Total Payment: $${totalPayment.toFixed(2)}`);
+  }
+  
+  calculateLoanPayment(1250, 0.05, 2);
+  calculateLoanPayment(6700, 0.07, 3);
